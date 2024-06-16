@@ -1,0 +1,21 @@
+<h2>Lista de pacientes:</h2>
+<hr>
+<a href="/admin/pacientes/add"><button class="btn btn-success">Novo paciente</button></a>
+
+{{#each pacientes}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{nome}}</h4>
+            <small>{{turno}}</small><br>
+            <small>{{date}}</small><br>
+            <a href="/admin/pacientes/edit/{{_id}}"><button class="btn btn-success mt-4">Editar dados</button></a>
+            <a href="/admin/atendimentos/{{_id}}"><button class="btn btn-primary mt-4">Ver atendimentos</button></a>
+            <form action="/admin/pacientes/deletar" method="post">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2">Excluir paciente</button>
+            </form>
+        </div>
+    </div>
+{{else}}
+    <h4 class="mt-4">Nenhum paciente registrado</h4>
+{{/each}}

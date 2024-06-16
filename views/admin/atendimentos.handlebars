@@ -1,0 +1,23 @@
+<h2>Lista de atendimentos:</h2>
+<hr>
+<a href="/admin/atendimentos/add"><button class="btn btn-success">Novo atendimento</button></a>
+
+{{#each atendimentos}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{titulo}}</h4>
+            <p>Descrição: {{descricao}}</p>
+            <p>Conteúdo: {{conteudo}}</p>
+            <small>Turno: {{turno}}</small><br>
+            <small>Data: {{data}}</small><br>
+            <small>Paciente: {{paciente.nome}}</small><br>
+            <a href="/admin/atendimentos/edit/{{_id}}"><button class="btn btn-success mt-4">Editar atendimento</button></a>
+            <form action="/admin/atendimentos/deletar" method="post">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2">Excluir atendimento</button>
+            </form>
+        </div>
+    </div>
+{{else}}
+    <h4 class="mt-4">Nenhum atendimento encontrado</h4>
+{{/each}}
