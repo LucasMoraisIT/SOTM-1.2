@@ -1,3 +1,81 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgba(13, 185, 56, 0.581);
+    }
+    
+    h1{
+        text-align: center;
+        padding: 10px;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .register-container {
+        background-color: #06471999;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 10px 10px 10px rgba(3, 59, 28, 0.819);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #02370d;
+        border-radius: 5px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #034519;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #0f6d0b;
+    }
+</style>
 {{#each erros}}
 
     <div class="alert alert-danger">{{texto}}</div>
@@ -5,19 +83,25 @@
 {{else}}
 
 {{/each}}
-<h2>Crie sua conta:</h2>
-<div class="card">
-    <div class="card-body">
-        <form action="" method="post">
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" class="form-control" required>
-            <label for="email">Email: </label>
-            <input type="email" name="email" class="form-control" required>
-            <label for="senha">Senha: </label>
-            <input type="password" name="senha" class="form-control" required>
-            <label for="senha2">Repita a sua senha: </label>
-            <input type="password" name="senha2" class="form-control" required>
-            <button type="submit" class="btn btn-success mt-4">Criar conta</button>
-        </form>
-    </div>
-</div>
+<body>
+    <h1>Bem-vindo!</h1>
+    <p> Estamos felizes por você estar aqui. Faça seu registro para continuar sua jornada conosco.</p>
+    
+        <div class="container">
+            <div class="register-container">
+                <h2>Registro</h2>
+                <form action="" method="post">
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" class="form-control" required>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" class="form-control" required>
+                    <label for="senha">Senha: </label>
+                    <input type="password" name="senha" class="form-control" required>
+                    <label for="senha2">Repita a sua senha: </label>
+                    <input type="password" name="senha2" class="form-control" required>
+                    <button type="submit" class="btn btn-success mt-4">Criar conta</button>
+                </form>
+            </div>
+        </div>
+  
+</body>

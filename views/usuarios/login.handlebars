@@ -1,12 +1,100 @@
-<h2>Login:</h2>
-<div class="card">
-    <div class="card-body">
-        <form action="/usuarios/login" method="post">
-            <label for="email">Email: </label>
-            <input type="email" name="email" class="form-control" required>
-            <label for="senha">Senha: </label>
-            <input type="password" name="senha" class="form-control" required>
-            <button type="submit" class="btn btn-success mt-4">Fazer login</button>
-        </form>
+<style>
+    * {
+        margin: 0;
+        padding: 5;
+        box-sizing: border-box;
+    }
+    
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgba(13, 185, 56, 0.581);
+    }
+    
+    .container {
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .login-container {
+        background-color: #1b4417be;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.362);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input-group {
+        margin-bottom: 25px;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #2e7414c2;
+        border-radius: 10px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #012508;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #2be948;
+    }
+    
+    h1{
+        text-align: center;
+        padding: 20px;
+    
+    }
+    
+    p{
+        text-align: center;
+    
+    }
+</style>
+<body>
+    <h1>
+        Seja bem-vindo(a)!
+    </h1>
+    <p>
+        Para acessar sua conta, por favor, faça login abaixo. Estamos ansiosos para tê-lo(a) de volta em nossa comunidade."
+    </p>
+    <div class="container">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="/usuarios/login" method="post">
+                <label for="email">Email: </label>
+                <input type="email" name="email" class="form-control" required>
+                <label for="senha">Senha: </label>
+                <input type="password" name="senha" class="form-control" required>
+                <button type="submit" class="btn btn-success mt-4">Fazer login</button>
+            </form>
+        </div>
     </div>
-</div>
+</body>
+</html>
